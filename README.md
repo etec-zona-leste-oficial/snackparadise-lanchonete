@@ -18,7 +18,7 @@ Projeto realizado no 1° e 2º ano do curso a fim de ser apresentado para a empr
 ![JavaScript](https://img.shields.io/badge/javascript-e32636.svg?style=for-the-badge&logo=javascript&logoColor=white)
 ![PHP](https://img.shields.io/badge/php-b81414.svg?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-e32636.svg?style=for-the-badge&logo=mysql&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Kotlin](https://img.shields.io/badge/kotlin-b81414.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 <hr>
 </div>
 
