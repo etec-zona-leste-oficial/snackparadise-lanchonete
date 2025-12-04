@@ -1,0 +1,265 @@
+@import url('https://fonts.cdnfonts.com/css/biko');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Biko", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* BACKGROUND */
+.fundo {
+    background-image: url('../imgs/Background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+/* CORES */
+:root {
+    --cor-primaria: #a20908;
+    --cor-secundaria: #f40919;
+    --cor-amarelo: #fccc16;
+    --cor-dourado: #fabb18;
+    --cor-branco: #ffffff;
+    --cor-preto: #000000;
+    --cor-cinza: #f5f5f5;
+    --cor-cinza-escuro: #333333;
+}
+
+/* HEADER */
+header {
+    background: var(--cor-branco);
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 80px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-menu-lateral {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--cor-primaria);
+    padding: 8px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.btn-menu-lateral:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.btn-menu-lateral.active {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    transform: rotate(90deg);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* MENU */
+.menu-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background:#f8ecec;
+}
+
+/* BOTÃO CONTA */
+.btn-conta {
+    background: var(--cor-primaria);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-conta:hover {
+    background:#fff;
+    color: var(--cor-primaria);
+    border:2px solid var(--cor-primaria);
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+    padding-top: 80px;
+    transition: 0.3s;
+    z-index: 998;
+}
+
+.menu-lateral.ativo {
+    left: 0;
+}
+
+.menu-lateral-item {
+    padding: 18px 25px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-lateral-item:hover,
+.menu-lateral-item.active {
+    background: var(--cor-primaria);
+    color: #fff;
+}
+
+/* ÁREA RESTRITA */
+.area-restrita-section {
+    padding: 40px 8%;
+}
+
+.tit {
+    color: #fff;
+    text-shadow: 0px 0px 6px #000;
+    font-size: 2rem;
+}
+
+/* GRID FINAL — SEM BUG */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* CARD DO PEDIDO */
+.order-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-4px);
+}
+
+/* STATUS */
+.order-status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* status visual */
+.status-pendente {
+    background: #ffe8a6;
+    color: #8a6d3b;
+}
+
+.status-entregue {
+    background: #c6f3c0;
+    color: #1e6b25;
+}
+
+.status-cancelado,
+.status-recusado {
+    background: #ffb8b8;
+    color: #7a1c1c;
+}
+
+.status-aceito,
+.status-em-andamento {
+    background: #cfe3ff;
+    color: #003c71;
+}
+
+/* BOTÕES */
+.btn-aceitar,
+.btn-recusar {
+    width: 130px;
+    padding: 10px;
+    border:none;
+    border-radius:6px;
+    background: var(--cor-primaria);
+    color:white;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn-aceitar:hover,
+.btn-recusar:hover {
+    opacity:.85;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 850px) {
+    header {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .header-center {
+        display: block;
+        text-align: center;
+    }
+}
+
